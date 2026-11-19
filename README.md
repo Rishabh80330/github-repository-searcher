@@ -176,3 +176,32 @@ The application handles:
 **Rishabh Agrawal**
 
 GitHub: [Rishabh80330](https://github.com/Rishabh80330)
+
+## Postman Collection
+
+A Postman collection is included in this repository to make API testing easier.
+
+**Collection file:**
+
+`postman/GitHub Repository Searcher.postman_collection.json`
+
+### Import Collection
+
+1. Open Postman.
+2. Click **Import**.
+3. Select the Postman collection JSON file from the `postman` folder.
+4. Import the collection.
+
+### Run API Requests
+
+Make sure the Spring Boot application is running on `http://localhost:8080` before sending requests.
+
+The collection includes:
+
+- Search GitHub Repositories (POST)
+- Get All Repositories (GET)
+- Filter by Language & Stars (GET)
+- Sort Repositories by Forks (GET)
+- Sort Repositories by Updated (GET)
+
+All requests can be executed directly from Postman.
