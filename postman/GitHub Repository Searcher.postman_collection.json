@@ -1,0 +1,167 @@
+{
+  "info": {
+    "_postman_id": "8fa0af37-fba3-4e62-a721-0a652e86f1d8",
+    "name": "GitHub Repository Searcher",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44351076",
+    "_collection_link": "https://go.postman.co/collection/44351076-8fa0af37-fba3-4e62-a721-0a652e86f1d8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Search GitHub Repositories",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"query\": \"spring boot\",\r\n  \"language\": \"Java\",\r\n  \"sort\": \"stars\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/github/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Repositories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/github/repositories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "repositories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter by Language & Stars",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/github/repositories?language=Java&minStars=100&sort=stars",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "repositories"
+          ],
+          "query": [
+            {
+              "key": "language",
+              "value": "Java"
+            },
+            {
+              "key": "minStars",
+              "value": "100"
+            },
+            {
+              "key": "sort",
+              "value": "stars"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sort Repositories by Forks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/github/repositories?language=Java&minStars=100&sort=forks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "repositories"
+          ],
+          "query": [
+            {
+              "key": "language",
+              "value": "Java"
+            },
+            {
+              "key": "minStars",
+              "value": "100"
+            },
+            {
+              "key": "sort",
+              "value": "forks"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sort Repositories by Updated",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/github/repositories?language=Java&minStars=100&sort=updated",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "repositories"
+          ],
+          "query": [
+            {
+              "key": "language",
+              "value": "Java"
+            },
+            {
+              "key": "minStars",
+              "value": "100"
+            },
+            {
+              "key": "sort",
+              "value": "updated"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
